@@ -1,1 +1,4 @@
 <h1><%= @category.name %></h1>
+<%= link_to 'View cards', category_card_path(@category), class: 'btn btn-primary' %>
+<%= link_to 'Add cards', new_category_card_path(@category), class: 'btn btn-primary' %>
+<h3>Add sub-category</h3>

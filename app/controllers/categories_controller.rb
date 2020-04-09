@@ -12,6 +12,7 @@ class CategoriesController < ApplicationController
   end
 
   def create
+    @category = Category.find
     child = @category.children.create(category_params)
     redirect_to categories_path
   end

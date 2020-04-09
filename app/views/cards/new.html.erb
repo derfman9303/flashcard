@@ -1,0 +1,11 @@
+<div class="center-vertical">
+  <div class="center-horizontal">
+    <div class="form-container">
+      <%= simple_form_for @card, url: category_cards_path(@category), method: :post do |f| %>
+        <%= f.input :front %>
+        <%= f.input :back %>
+        <%= f.button :submit, class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</div>
