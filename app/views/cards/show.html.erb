@@ -1,0 +1,10 @@
+<div class="center-vertical">
+  <div class="center-horizontal">
+    <%= render partial: 'card' %>
+  </div>
+</div>
+<script>
+  $(".flip-card").click(function() {
+    $(this).addClass("clicked");
+  });
+</script>

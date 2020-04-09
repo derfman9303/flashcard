@@ -3,18 +3,22 @@ class CategoriesController < ApplicationController
     @categories = Category.all
   end
 
+  def show
+    @category = Category.find(params[:id])
+  end
+
   def new
-    @category = Category.new
+    @category = Category.new 
   end
 
   def create
-    @category = Category.create(category_params)
+    child = @category.children.create(category_params)
     redirect_to categories_path
   end
 
   private
 
   def category_params
-    params.require(:category).permit(:name)
+    params.require(:category).permit(:name, :parent_id)
   end
 end
